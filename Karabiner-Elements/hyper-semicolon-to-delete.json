@@ -1,0 +1,13 @@
+{
+    "description": "Hyper + ; to Delete",
+    "manipulators": [
+        {
+            "from": {
+                "key_code": "semicolon",
+                "modifiers": { "mandatory": ["right_shift", "right_command", "right_control", "right_option"] }
+            },
+            "to": [{ "key_code": "delete_or_backspace" }],
+            "type": "basic"
+        }
+    ]
+}
