@@ -1,0 +1,37 @@
+{
+    "description": "CapsLock to ESC | Hyper",
+    "manipulators": [
+        {
+            "description": "capslock = esc(click) | hyper(hold)",
+            "from": {
+                "key_code": "caps_lock",
+                "modifiers": { "optional": ["any"] }
+            },
+            "to": [
+                {
+                    "key_code": "right_shift",
+                    "modifiers": ["right_command", "right_control", "right_option"]
+                }
+            ],
+            "to_if_alone": [{ "key_code": "escape" }],
+            "type": "basic"
+        },
+        {
+            "description": "escape = capslock switch",
+            "from": {
+                "key_code": "escape",
+                "modifiers": {
+                    "mandatory": ["right_command", "right_control", "right_shift", "right_option"],
+                    "optional": ["caps_lock"]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "caps_lock",
+                    "modifiers": ["left_control"]
+                }
+            ],
+            "type": "basic"
+        }
+    ]
+}
